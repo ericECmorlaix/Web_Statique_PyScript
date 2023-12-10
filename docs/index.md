@@ -1,12 +1,20 @@
 ---
 template: pyscript.html
 ---
+# Web statique avec PyScript
 
-# Memo pour PyScript
+## Kesako
+
+PyScript est une boite à outils (un framework) qui permet aux développeurs d'ajouter une logique Python _"pour donner vie"_ à l'interface HTML (le [DOM](https://la-cascade.io/articles/le-dom-cest-quoi-exactement)) de leurs pages WEB et ainsi créer des applications interactives fonctionnant dans un navigateur.
 
 ![kesako PyScript](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF__EJSdwxNWURtTHkuST0NcYnwnSYesBzc0W6lXrXKieKx3Glu9lW8zDgGYaf-i2Y8pI&usqp=CAU){.center}
 
 <!-- (https://www.jhanley.com/wp-content/uploads/2022/05/pyscript-what-is-it.jpg) -->
+
+PyScript est un méta-projet qui combine plusieurs technologies ouvertes comme [Pyodide](https://pyodide.org/en/stable/) , [MicroPython](https://micropython.org/) et [WASM](https://webassembly.org/) entre autres technologies Web modernes.
+
+## Exemple
+
 
 ## Préparation
 
