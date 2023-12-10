@@ -36,6 +36,39 @@ Se référer [au résumé de configuration de Rodrigo SCHWENCKE](https://eskool.
 
 ## Inventaire de balises
 
+### `<script type="py-editor">`
+
+Si vous spécifiez le type `py-editor`(pour Pyodide) ou `mpy-editor`(pour MicroPython) dans une balise `<script>`, le plugin crée un éditeur de code visuel en mode REPL genre notebook jupyter, avec un bouton pour exécuter le code contenu dans la cellule; L'utilisateur peut alors modifier le code et aussi ajouter des cellules.
+
+=== "Le code :"
+    ```html
+    <script type="py-editor">
+      import sys
+      print(sys.version)
+    </script>
+    <script type="mpy-editor">
+        import sys
+        print(sys.version)
+        a = 42
+        print(a)
+    </script>    
+    ```
+=== "Produit :"
+    <script type="py-editor">
+      import sys
+      print(sys.version)
+    </script>
+    <script type="mpy-editor">
+        import sys
+        print(sys.version)
+        a = 42
+        print(a)
+    </script>
+
+> Saisir une instruction Python dans la cellule REPL puis l'exécuter avec la combinaison de touches ++"⇑ Maj."+"Entrée ↵"++...
+
+
+<!-- 
 ###  `<py-script>`
 
 === "Le code :"
@@ -80,36 +113,6 @@ Se référer [au résumé de configuration de Rodrigo SCHWENCKE](https://eskool.
 ***
 
 
-### `<script type="py-editor">`
-
-Si vous spécifiez le type d'une balise `<script>` comme `py-editor`(pour Pyodide) ou `mpy-editor`(pour MicroPython), le plugin crée un éditeur de code visuel, avec une mise en évidence du code et un bouton "exécuter" pour exécuter le code modifiable qu'il contient dans un REPL non bloquant.
-
-=== "Le code :"
-    ```html
-    <script type="py-editor">
-      import sys
-      print(sys.version)
-    </script>
-    <script type="mpy-editor">
-        import sys
-        print(sys.version)
-        a = 42
-        print(a)
-    </script>    
-    ```
-=== "Produit :"
-    <script type="py-editor">
-      import sys
-      print(sys.version)
-    </script>
-    <script type="mpy-editor">
-        import sys
-        print(sys.version)
-        a = 42
-        print(a)
-    </script>
-
-> Saisir une instruction Python dans la cellule REPL puis l'exécuter avec la combinaison de touches ++"⇑ Maj."+"Entrée ↵"++...
 
 ***
 
@@ -329,4 +332,4 @@ def on_click(event):
 
 ### `<py-config>`
 
-
+ -->
