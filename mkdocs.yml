@@ -139,8 +139,8 @@ extra_javascript:
 extra_css:
   - stylesheets/extra.css
   # - https://pyscript.net/alpha/pyscript.css
-  # - https://pyscript.net/releases/2023.11.2/core.css
-  - https://pyscript.net/latest/pyscript.css
+  - https://pyscript.net/releases/2023.11.2/core.css
+  # - https://pyscript.net/latest/pyscript.css
   
 
   

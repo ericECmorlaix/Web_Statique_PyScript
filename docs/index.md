@@ -15,6 +15,9 @@ PyScript est un méta-projet qui combine plusieurs technologies ouvertes comme 
 
 ## Exemple
 
+C'est PyScript qui me permet d'intégrer des cellules interactives de code Python directement dans cette page afin de vous proposer l'activité suivante :
+
+- 
 
 ## Préparation
 
@@ -77,14 +80,34 @@ Se référer [au résumé de configuration de Rodrigo SCHWENCKE](https://eskool.
 ***
 
 
-### `<py-repl>`
+### `<script type="py-editor">`
+
+Si vous spécifiez le type d'une balise `<script>` comme `py-editor`(pour Pyodide) ou `mpy-editor`(pour MicroPython), le plugin crée un éditeur de code visuel, avec une mise en évidence du code et un bouton "exécuter" pour exécuter le code modifiable qu'il contient dans un REPL non bloquant.
 
 === "Le code :"
     ```html
-    <py-repl id="my-repl" auto-generate=true></py-repl>
+    <script type="py-editor">
+      import sys
+      print(sys.version)
+    </script>
+    <script type="mpy-editor">
+        import sys
+        print(sys.version)
+        a = 42
+        print(a)
+    </script>    
     ```
 === "Produit :"
-    <<py-repl id="my-repl" auto-generate=true></py-repl>
+    <script type="py-editor">
+      import sys
+      print(sys.version)
+    </script>
+    <script type="mpy-editor">
+        import sys
+        print(sys.version)
+        a = 42
+        print(a)
+    </script>
 
 > Saisir une instruction Python dans la cellule REPL puis l'exécuter avec la combinaison de touches ++"⇑ Maj."+"Entrée ↵"++...
 
