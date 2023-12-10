@@ -1,19 +1,19 @@
 # Fichier de configuration du site à personnaliser
 ### Configuration minimale
-site_name: tests_PyScript # Nom du site <70 caractères, apparait dans l'onglet du navigateur 
-site_url: https://ericecmorlaix.github.io/tests_PyScript/ # Adresse web principale de publication du site, à modifier au format https://votrePseudoGitHub.github.io/votreDepot/
+site_name: Web_Statique_PyScript # Nom du site <70 caractères, apparait dans l'onglet du navigateur 
+site_url: https://ericecmorlaix.github.io/Web_Statique_PyScript # Adresse web principale de publication du site, à modifier au format https://votrePseudoGitHub.github.io/votreDepot/
 
 ### Configuration du dépôt
 # Ajoute en haut à droite de chaque page du site, icône, nom et lien vers le dépot GitHub du projet.
-repo_url: https://github.com/ericECmorlaix/tests_PyScript
-repo_name: 'tests_PyScript' # Personnalise le nom générique "GitHub" donné par défaut au lien vers le dépot GitHub du projet.
+repo_url: https://github.com/ericECmorlaix/Web_Statique_PyScript
+repo_name: 'Web_Statique_PyScript' # Personnalise le nom générique "GitHub" donné par défaut au lien vers le dépot GitHub du projet.
 edit_uri: edit/main/docs/ # Complément au chemin pour aller depuis `repo_url:` jusqu'au répertoire `docs` ;
 # Ce qui permet avec MkDocs-Material d'ajouter un bouton (crayon) d'édition du code source.md d'une page du site depuis le navigateur
 # (edit => édition avec connexion | blob, tree => lecture anonyme)
 
 ### Configuration de métadonnées
 # Métadonnées de description <300 caratères, et d'auteur pour toutes les pages du site 
-site_description: Exemple de site MkDocs avec le thème Material et intégrant PyScript
+site_description: Aide pour créer des pages web statique avec le framework PyScript
 site_author: "Eric MADEC"
 
 ### Configuration de la stucture de navigation
@@ -111,7 +111,7 @@ plugins:
 # Information de droit d'auteur qui s'affiche dans le pied de page pour toutes les pages du site
 copyright: >
     Document partagé par <a href="https://github.com/ericECmorlaix" target="_blank">Eric MADEC</a>
-    &copy; 2021 sous licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="_blank">CC BY-NC-SA 4.0</a>
+    &copy; 2023 sous licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="_blank">CC BY-NC-SA 4.0</a>
     <br> Illustrations par <a href="https://undraw.co/" target="_blank">UnDraw</a>
 
 
@@ -130,7 +130,7 @@ extra:
 
 # Configuration de javascripts complémentaires
 extra_javascript:
-  - javascripts/config.js
+  - javascripts/config.js  
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
@@ -138,9 +138,9 @@ extra_javascript:
 # Configuration de css complémentaires
 extra_css:
   - stylesheets/extra.css
-  # - https://pyscript.net/alpha/pyscript.css
-  - https://pyscript.net/releases/2023.12.1/core.css
-  # - https://pyscript.net/latest/pyscript.css
+  # - https://pyscript.net/alpha/pyscript.css  
+  - https://pyscript.net/latest/pyscript.css
+  # - https://pyscript.net/releases/2023.12.1/core.css
   
 
   

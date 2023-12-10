@@ -1,38 +1,89 @@
 ---
 template: pyscript.html
 ---
-# Web statique avec PyScript
+# Introduction à PyScript
 
 ## Kesako
 
-PyScript est une boite à outils (un framework) qui permet aux développeurs d'ajouter une logique Python _"pour donner vie"_ à l'interface HTML (le [DOM](https://la-cascade.io/articles/le-dom-cest-quoi-exactement)) de leurs pages WEB et ainsi créer des applications interactives fonctionnant dans un navigateur.
+PyScript est une boite à outils (un framework) qui permet aux développeurs d'ajouter une logique Python _"pour donner vie"_ à l'interface HTML (le [DOM](https://la-cascade.io/articles/le-dom-cest-quoi-exactement){target=_blank}) de leurs pages WEB et ainsi créer des applications interactives fonctionnant dans un navigateur.
 
 ![kesako PyScript](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF__EJSdwxNWURtTHkuST0NcYnwnSYesBzc0W6lXrXKieKx3Glu9lW8zDgGYaf-i2Y8pI&usqp=CAU){.center}
 
 <!-- (https://www.jhanley.com/wp-content/uploads/2022/05/pyscript-what-is-it.jpg) -->
 
-PyScript est un méta-projet qui combine plusieurs technologies ouvertes comme [Pyodide](https://pyodide.org/en/stable/) , [MicroPython](https://micropython.org/) et [WASM](https://webassembly.org/) entre autres technologies Web modernes.
+PyScript est un méta-projet qui combine plusieurs technologies ouvertes comme [Pyodide](https://pyodide.org/en/stable/){target=_blank} , [MicroPython](https://micropython.org/){target=_blank} et [WASM](https://webassembly.org/){target=_blank} entre autres technologies Web modernes.
 
 ## Exemple
 
 C'est PyScript qui me permet d'intégrer des cellules interactives de code Python directement dans cette page afin de vous proposer l'activité suivante :
 
-- 
+<div>
+    <py-repl>
+    def inverse_chaine(chaine):
+        """
+        Compléter la docstring... 
+        """
+        chaine_inverse = '' # Commenter cette instruction...
+        # Commenter le bloc d'instructions...
+        for caractere in chaine:            
+            chaine_inverse = caractere + chaine_inverse # Commenter cette instruction...
+        return chaine_inverse # Commenter cette instruction...
 
-## Préparation
+    def est_palindrome(chaine):
+        """
+        Compléter la docstring... 
+        """
+        chaine_inverse = inverse_chaine(chaine) # Commenter cette instruction...
+        # Commenter le bloc d'instructions...
+        if chaine.lower() == "kayak" :
+            print("'kayak' est un faux ami, à l'envers il fait 'glouglou' !") # Commenter cette instruction...
+        else :
+            return chaine == chaine_inverse # Commenter cette instruction...
+
+    print("Maintenant que ces fonctions sont définie, on peut les tester...")
+    </py-repl>
+    <py-repl>
+        # test 1 : doit renvoyer 'NSI'
+    inverse_chaine('ISN')
+    </py-repl>
+    <py-repl>
+        # test 2 : doit renyoyer False
+    est_palindrome('NSI')
+    </py-repl>
+    <py-repl>
+        # tests 3 : doit renyoyer True
+    est_palindrome('ISN-NSI')
+    </py-repl>
+    <py-repl>
+        # tests 4 : ???
+    est_palindrome('kayak')
+    </py-repl>
+    <py-repl id="my-repl" auto-generate=true>
+        # Réaliser vos propres tests :
+    ...
+    </py-repl>
+    </div>
+
+???+ example "A faire vous même n°1 : ..."
+    
+    - **Exécuter** successivement les instructions des cellules [REPL](https://en.wikipedia.org/wiki/Read-eval-print_loop){target=_blank} ci-dessus avec la combinaison de touches ++"⇑ Maj."+"Entrée ↵"++ ;
+    - **Compléter** la docstring et les commentaires des fonctions `inverse_chaine(chaine)` et `est_palindrome(chaine)` en précisant le typage des entrée/sortie ;
+    - **Copier/Coller** les codes ainsi complétés dans le [notebook de retour d'activité sur Capytale](){target=_blank} ;
+
+## Principe
 
 ### Page HTML
 
 Il faut inclure dans le `<head>` deux balises :
 ```html
 <head>
-  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  <!-- Pour appliquer le CSS de PyScript -->  
+  <link rel="stylesheet" href="https://pyscript.net/releases/2023.12.1/core.css">
+  <!-- Pour appliquer PyScript -->
+  <script type="module" src="https://pyscript.net/releases/2023.12.1/core.js"></script>  
 </head>
 ```
-### Page MkDocs MarkDown
 
-Se référer [au résumé de configuration de Rodrigo SCHWENCKE](https://eskool.gitlab.io/mkhack3rs/pyscript/).
 
 ## Inventaire de balises
 
@@ -43,29 +94,34 @@ Si vous spécifiez le type `py-editor`(pour Pyodide) ou `mpy-editor`(pour MicroP
 === "Le code :"
     ```html
     <script type="py-editor">
-      import sys
-      print(sys.version)
+    import sys
+    print(sys.version)
     </script>
     <script type="mpy-editor">
-        import sys
-        print(sys.version)
-        a = 42
-        print(a)
+    import sys
+    print(sys.version)
+    a = 42
+    print(a)
     </script>    
     ```
 === "Produit :"
     <script type="py-editor">
-      import sys
-      print(sys.version)
+    import sys
+    print(sys.version)
     </script>
     <script type="mpy-editor">
-        import sys
-        print(sys.version)
-        a = 42
-        print(a)
+    import sys
+    print(sys.version)
+    a = 42
+    print(a)
     </script>
 
 > Saisir une instruction Python dans la cellule REPL puis l'exécuter avec la combinaison de touches ++"⇑ Maj."+"Entrée ↵"++...
+
+
+## Ressources
+
+[https://pyscript.github.io/docs/2023.12.1/](https://pyscript.github.io/docs/2023.12.1/)
 
 
 <!-- 
@@ -314,19 +370,18 @@ Si vous spécifiez le type `py-editor`(pour Pyodide) ou `mpy-editor`(pour MicroP
   <!-- <py-inputbox>
 def on_keypress(event):
     print(event)
-  </py-inputbox> -->
+  </py-inputbox>
 
 ### `<py-box>`
 
 
 
-
 ### `<py-button>`
 
-  <!-- <py-button label="Click me" styles="btn big">
+   <py-button label="Click me" styles="btn big">
 def on_click(event):
     print(event)
-  </py-button> -->
+  </py-button>
 
 
 
