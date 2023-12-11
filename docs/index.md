@@ -68,24 +68,64 @@ C'est PyScript qui me permet d'intégrer des cellules interactives de code Pytho
     
     - **Exécuter** successivement les instructions des cellules [REPL](https://en.wikipedia.org/wiki/Read-eval-print_loop){target=_blank} ci-dessus avec la combinaison de touches ++"⇑ Maj."+"Entrée ↵"++ ;
     - **Compléter** la docstring et les commentaires des fonctions `inverse_chaine(chaine)` et `est_palindrome(chaine)` en précisant le typage des entrée/sortie ;
-    - **Copier/Coller** les codes ainsi complétés dans le [notebook de retour d'activité sur Capytale](){target=_blank} ;
+    - **Copier/Coller** les codes ainsi complétés dans le [notebook de retour d'activité sur Capytale](https://capytale2.ac-paris.fr/web/c/d76b-2521137){target=_blank} ;
 
-## Principe
+## Principe de PyScript
 
-### Page HTML
+### Dans le <head>
 
 Il faut inclure dans le `<head>` deux balises :
 ```html
 <head>
   <!-- Pour appliquer le CSS de PyScript -->  
   <link rel="stylesheet" href="https://pyscript.net/releases/2023.12.1/core.css">
-  <!-- Pour appliquer PyScript -->
+  <!-- Pour amorcer PyScript -->
   <script type="module" src="https://pyscript.net/releases/2023.12.1/core.js"></script>  
 </head>
 ```
 
+### Dans le <body>
 
-## Inventaire de balises
+Il faut inclure dans le `<body>` des balises `<script>` :
+```html
+<h1>Une page avec PyScript</h1>
+<p>
+    <strong>
+        <script type="py">
+            from pyscript import display
+            for _ in range(10) :
+                display("Bonjour le web") # s'affiche dans le DOM
+        </script>
+    </strong>
+</p>
+<img src="https://pyscript.github.io/docs/2023.12.1/assets/images/pyscript.svg" width=60%>
+<script type="py" terminal>
+    print("Bonjour le terminal") # s'affiche dans le terminal
+</script>
+```
+Avec :
+- Le `type="py"` pour l'interpréteur Pyodide ou `type="mpy"` pour MicroPython ;
+- Le mot clé `terminal` ajoute un terminal pour afficher les `print()` ;
+- Le mot clé `worker` permet les `input()` dans le terminal ;
+
+???+ example "A faire vous même n°2 : ..."
+    
+    - **Cliquer** sur le bouton vert `Use this template` pour **créer** un nouveau dépôt GitHub à partir du [Templtate_Web_Statique_PyScript](https://en.wikipedia.org/wiki/Read-eval-print_loop){target=_blank} ;
+    - **Observer** les résultat sur votre site ;
+    - **Personaliser** le code de la page ;
+    - **Copier/Coller** l'URL de votre site dans le [notebook de retour d'activité sur Capytale](https://capytale2.ac-paris.fr/web/c/d76b-2521137){target=_blank} ;
+
+## Autre exemple
+
+**Ajouter** une nouvelle `page.html` pour votre chiffrement de César en vous inspirant de la [documentation beginning-pyscript](https://pyscript.github.io/docs/2023.12.1/beginning-pyscript/){target=_blank} ;
+
+
+## Ressources
+
+- [Documentation PyScript version 2023.12.1](https://pyscript.github.io/docs/2023.12.1/){target=_blank} ;
+
+<!-- 
+
 
 ### `<script type="py-editor">`
 
@@ -116,15 +156,9 @@ Si vous spécifiez le type `py-editor`(pour Pyodide) ou `mpy-editor`(pour MicroP
     print(a)
     </script>
 
-> Saisir une instruction Python dans la cellule REPL puis l'exécuter avec la combinaison de touches ++"⇑ Maj."+"Entrée ↵"++...
 
 
-## Ressources
 
-[https://pyscript.github.io/docs/2023.12.1/](https://pyscript.github.io/docs/2023.12.1/)
-
-
-<!-- 
 ###  `<py-script>`
 
 === "Le code :"
