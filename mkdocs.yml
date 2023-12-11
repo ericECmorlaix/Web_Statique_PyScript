@@ -22,11 +22,6 @@ docs_dir: docs
 # Structure du menu principal de navigation, chemins relatifs au dossier docs_dir
 nav: 
   - Accueil : index.md
-  - PyScript M : pyscript.md
-  - PyScript H : pyscript.html
-  - Canvas M : pyscript-canvas.md
-  - Canvas H : pyscript-canvas.html
-  - Horloge H : pyscript-horloge.html
   - Ressources: ressources.md
   
   # Référencer vos autres pages ci-dessus...

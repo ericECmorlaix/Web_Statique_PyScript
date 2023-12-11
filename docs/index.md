@@ -72,7 +72,7 @@ C'est PyScript qui me permet d'intégrer des cellules interactives de code Pytho
 
 ## Principe de PyScript
 
-### Dans le <head>
+### Dans l'entête
 
 Il faut inclure dans le `<head>` deux balises :
 ```html
@@ -84,7 +84,7 @@ Il faut inclure dans le `<head>` deux balises :
 </head>
 ```
 
-### Dans le <body>
+### Dans le corps
 
 Il faut inclure dans le `<body>` des balises `<script>` :
 ```html
@@ -104,6 +104,7 @@ Il faut inclure dans le `<body>` des balises `<script>` :
 </script>
 ```
 Avec :
+
 - Le `type="py"` pour l'interpréteur Pyodide ou `type="mpy"` pour MicroPython ;
 - Le mot clé `terminal` ajoute un terminal pour afficher les `print()` ;
 - Le mot clé `worker` permet les `input()` dans le terminal ;
@@ -117,7 +118,9 @@ Avec :
 
 ## Autre exemple
 
-**Ajouter** une nouvelle `page.html` pour votre chiffrement de César en vous inspirant de la [documentation beginning-pyscript](https://pyscript.github.io/docs/2023.12.1/beginning-pyscript/){target=_blank} ;
+???+ example "A faire vous même n°3 : ..."
+
+    **Ajouter** une nouvelle `page.html` pour votre chiffrement de César en vous inspirant de la [documentation beginning-pyscript](https://pyscript.github.io/docs/2023.12.1/beginning-pyscript/){target=_blank} ;
 
 
 ## Ressources
