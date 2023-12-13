@@ -111,7 +111,7 @@ Avec :
 
 ???+ example "A faire vous même n°2 : ..."
     
-    - **Cliquer** sur le bouton vert `Use this template` pour **créer** un nouveau dépôt GitHub à partir du [Templtate_Web_Statique_PyScript](https://en.wikipedia.org/wiki/Read-eval-print_loop){target=_blank} ;
+    - **Cliquer** sur le bouton vert `Use this template` pour **créer** un nouveau dépôt GitHub à partir du [Templtate_Web_Statique_PyScript](https://github.com/ericECmorlaix/Template_Web_Statique_PyScript){target=_blank} ;
     - **Observer** les résultat sur votre site ;
     - **Personaliser** le code de la page ;
     - **Copier/Coller** l'URL de votre site dans le [notebook de retour d'activité sur Capytale](https://capytale2.ac-paris.fr/web/c/d76b-2521137){target=_blank} ;
